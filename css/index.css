@@ -1,0 +1,94 @@
+body{
+    background-color: #393e46;
+}
+
+.name{
+  color: #6d727b;
+  font-size: 1.7em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.email-address{
+  color: #6d727b;
+  font-size: 0.9em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.name-container {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.email-container {
+  text-align: center;
+}
+
+.resume-container{
+  margin: 15px 10%;
+  text-align: justify;
+}
+
+.resume{
+  color: #6d727b;
+  line-height: 1.6em;
+  font-size: 0.9em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.degree-container{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.degree{
+  color: #6d727b;
+  font-size: 0.9em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.me-photo-container{
+  object-fit: contain;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.me-photo{
+  width: 49.3141592%;
+  height: 49.3141592%;
+  border-radius: 80%;
+}
+
+.info-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #222831;
+}
+
+.contact-social-container {
+  width: auto;
+  margin: 20px 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons-social-network {
+  height: 25px;
+}
+
+.description-container{
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 50%;
+  height: auto;
+  padding: 5%;
+}
+
+.content-skill-container{
+  background-color: #d65a315a;
+  margin-bottom: 2%;
+  height: 249.6283184px;
+}
