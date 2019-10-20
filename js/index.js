@@ -1,7 +1,7 @@
 'use strict';
 
 window.chartColors = {
-	red: 'rgb(255, 99, 132)',
+	red: 'rgb(233, 100, 70)',
 	orange: 'rgb(255, 159, 64)',
 	yellow: 'rgb(255, 205, 86)',
 	green: 'rgb(75, 192, 192)',
@@ -44,24 +44,28 @@ var ctx = document.querySelectorAll('#myChart');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Java', 'Kotlin', 'RN', 'Flutter', 'Objective C', 'Swift'],
+			/*, 'MVP', 'MVVM', 'Rx.Java', 'Coroutines', 'Mockito', 'jUnit', 'Room'*/
+        labels: ['Java', 'Kotlin'],
         datasets: [{
             label: 'Mobile',
-            data: [4, 3, 0.6, 0.2, 0.7, 0.7],
+            data: [4, 1.5],//, 2, 0.7, 1.5, 0.5, 1, 1, 0.7
             backgroundColor:[
               'rgba(247, 245, 243, 1)',
               'rgba(222, 222, 224, 1)',
-              'rgba(191, 189, 185, 1)',
+              /*'rgba(191, 189, 185, 1)',
               'rgba(198, 188, 177, 1)',
               'rgba(53, 53, 60, 1)',
-              'rgba(230, 226, 227, 1)'
+              'rgba(230, 226, 227, 1)',
+              'rgba(53, 59, 70, 1)',
+							'rgba(199, 199, 195, 1)',
+							'rgba(86, 90, 100, 1)'*/
             ]
         }]
     },
     options: {
     		title: {
     			display: true,
-    			text: 'Mobile'
+    			text: 'Android'
     		},
         tooltips: {
             callbacks: {
@@ -93,32 +97,26 @@ var color = Chart.helpers.color;
 var config = {
 	type: 'radar',
 	data: {
-		labels: [['Eating', 'Dinner'], ['Drinking', 'Water'], 'Sleeping', ['Designing', 'Graphics'], 'Coding', 'Cycling', 'Running'],
+		labels: [['Spring boot', 'NodeJs'],
+		['Mysql', 'Postgres'],
+		['Github','Gitlab'],
+		['React', 'jquery'],
+		['Agile', 'Scrum'],
+		['Docker'],
+		['HTML5', 'Css']],
 		datasets: [{
+			label: "",
 			backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
 			borderColor: window.chartColors.red,
 			pointBackgroundColor: window.chartColors.red,
 			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
-			]
-		}, {
-			backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
-			borderColor: window.chartColors.blue,
-			pointBackgroundColor: window.chartColors.blue,
-			data: [
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor(),
-				randomScalingFactor()
+				80,
+				75,
+				65,
+				60,
+				75,
+				40,
+				50
 			]
 		}]
 	},
@@ -134,6 +132,14 @@ var config = {
 			ticks: {
 				beginAtZero: true
 			}
+		},
+		tooltips: {
+				callbacks: {
+						label: function(tooltipItem, data) {
+								var label = data.datasets[0].data[tooltipItem.index] + "% trust.";
+								return label;
+						}
+				}
 		}
 	}
 };
@@ -141,3 +147,14 @@ var config = {
 window.onload = function() {
 	window.myRadar = new Chart(document.querySelectorAll('#canvas'), config);
 };
+
+var android_libs = true;
+function showAndroidDetail(){
+	android_libs = !android_libs;
+	$("#android_libraries").toggleClass( "android_libraries", android_libs );
+	if (!android_libs) {
+		$("#android_read_more").html("Close");
+	} else {
+		$("#android_read_more").html("Read More");
+	}
+}

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
   </head>
@@ -18,19 +19,38 @@
         <span class="name">Servando Reyes</span>
       </div>
 
+      <div class="birthday-container">
+        <i class="material-icons">cake</i>
+        <span class="birthday">03/09/1988</span>
+      </div>
+
       <div class="email-container">
+        <i class="material-icons">email</i>
         <span class="email-address">servando.reyes.info@gmail.com</span>
       </div>
 
+      <div class="phone-container">
+        <i class="material-icons">phone</i>
+        <span class="phone"> Phone : +54 9 11 2657-9087</span>
+      </div>
+
       <div class="degree-container">
+        <i class="material-icons">school</i>
         <span class="degree">
-          2012. <b>Computer Science</b> – Bolivariana University of Venezuela.
+          2012. Computer Science – Bolivarian University of Venezuela.
+        </span>
+      </div>
+
+      <div class="place-container">
+        <i class="material-icons">room</i>
+        <span class="place">
+          Buenos Aires - Argentina.
         </span>
       </div>
 
       <div class="resume-container">
         <span class="resume">
-          I have a degree in computer science, with knowledge in the development of client - server solutions. I enjoy improving my skills being an autodidact or collaborative coworker and I try to mix that, feat a good playlist during the day.
+          I have a degree in computer science, with knowledge in the development of client-server solutions. I enjoy my career improving my skills, being an autodidact guy or even helping other coworkers, and this would not be possible without a good playlist during the day.
         </span>
       </div>
 
@@ -53,81 +73,122 @@
 
     <div class="description-container">
 
-      <div class="card">
-        <div class="card_image">
-          <canvas id="myChart" width="5%" height="4%"></canvas>
+      <div class="experience-container">
+        <ul>
+          <li id="etermax">
+            April 2019 until today. <br/>
+            Android Developer. <br/>
+            Etermax.
+          </li>
+          <li id="avantica">
+            October 2018 to April 2019. <br/>
+            Android Senior Developer. <br/>
+            Avantica.
+          </li>
+          <li id="edrans">
+            March 2018 to September 2018. <br/>
+            Full Stack Developer. <br/>
+            Edrans
+          </li>
+          <li id="remitee">
+            February 2017 to February 2018. <br/>
+            Android Senior Developer. <br/>
+            Remitee S.A
+          </li>
+          <li id="teravision">
+            November 2015 to January 2017. <br/>
+            Android Semi Senior Developer. <br/>
+            Teravision Technologies.
+          </li>
+          <li id="dlb">
+            February 2015 to October 2015. <br/>
+            Team Leader Web Developer. <br/>
+            DLB GROUP.
+          </li>
+          <li id="cantv">
+            October 2011 to January 2015. <br/>
+            Web Senior Developer. <br/>
+            CANTV.
+          </li>
+          <li id="infocentro">
+            January 2010 to March 2011. <br/>
+            Web Developer. <br/>
+            Infocentro.
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="skills-container">
+
+        <div class="card">
+          <div class="card_image">
+            <canvas id="myChart" width="5%" height="4%"></canvas>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">Libraries specifications used</h2>
+            <p class="card_text">As the chart shows, I've been 4 years in total working with Android, in middle I chose to use different frameworks even different methodologies, that it would help me to find a better solution for multiple challenges. For example next:</p>
+            <button id="android_read_more" class="btn card_btn" onclick="showAndroidDetail()">Read More</button>
+            <ul id="android_libraries" class="android_libraries">
+              <li>Data Binding</li>
+              <li>kotlinx</li>
+              <li>MVP</li>
+              <li>MVVM</li>
+              <li>Rx.Java</li>
+              <li>Coroutines</li>
+              <li>Mockito</li>
+              <li>jUnit</li>
+              <li>Room</li>
+              <li>Retrofit</li>
+              <li>Firebase</li>
+              <li>Facebook SDK</li>
+            </ul>
+          </div>
         </div>
-        <div class="card_content">
-          <h2 class="card_title">Mobile Languages</h2>
-          <p class="card_text">These languages I did use in different projects</p>
-          <!-- <button class="btn card_btn">Read More</button>  -->
+
+        <div class="card">
+          <div class="card_image">
+            <canvas id="canvas" width="5%" height="4%"></canvas>
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">Technical skills</h2>
+            <p class="card_text">My years of experience gave me the needest opportunities to learn and work in multiples and different scenarios, that allow me to think a bit in a global solution for each problem, no matter how complex are.</p>
+            <!-- <button class="btn card_btn">Read More</button>  -->
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="card_image">
-          <canvas id="canvas" width="5%" height="4%"></canvas>
+        <!-- IDEA:
+
+        <div class="card">
+          <div class="card_image">
+            <img src="https://picsum.photos/500/300/?image=10">
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">Mobile Languages</h2>
+            <p class="card_text">These languages I did use in different projects</p>
+            <button class="btn card_btn">Read More</button>
+          </div>
         </div>
-        <div class="card_content">
-          <h2 class="card_title">Card Grid Layout</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <!-- <button class="btn card_btn">Read More</button>  -->
+
+        <div class="card">
+          <div class="card_image">
+            <img src="https://picsum.photos/500/300/?image=11">
+          </div>
+          <div class="card_content">
+            <h2 class="card_title">Card Grid Layout</h2>
+            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+            <button class="btn card_btn">Read More</button>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="card_image">
-          <img src="https://picsum.photos/500/300/?image=10">
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">Mobile Languages</h2>
-          <p class="card_text">These languages I did use in different projects</p>
-          <!-- <button class="btn card_btn">Read More</button>  -->
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card_image">
-          <img src="https://picsum.photos/500/300/?image=11">
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">Card Grid Layout</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <!-- <button class="btn card_btn">Read More</button>  -->
-        </div>
-      </div>
-
-      <!-- IDEA:
-      <div class="content-skill-container">
+       -->
 
       </div>
-
-      <div class="content-skill-container">
-
-      </div>
-
-      <div class="content-skill-container">
-
-      </div>
-
-      <div class="content-skill-container">
-
-      </div>
-
-      <div class="content-skill-container">
-
-      </div>
-
-      <div class="content-skill-container">
-
-      </div>
-      -->
 
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <script type="text/javascript" src="js/index.js">
-
-    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

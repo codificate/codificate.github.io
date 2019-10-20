@@ -9,7 +9,44 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
+.info-container span:hover{
+  color: #f9f9f9;
+}
+
+.email-container {
+  margin-top: 15px;
+}
+
 .email-address{
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 3px;
+  color: #6d727b;
+  font-size: 0.9em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.place-container {
+  margin-top: 15px;
+}
+
+.place{
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 3px;
+  color: #6d727b;
+  font-size: 0.9em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.birthday-container {
+  margin-top: 15px;
+}
+
+.birthday{
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 3px;
   color: #6d727b;
   font-size: 0.9em;
   font-family: 'Raleway', sans-serif;
@@ -20,12 +57,8 @@ body{
   margin-top: 3%;
 }
 
-.email-container {
-  text-align: center;
-}
-
 .resume-container{
-  margin: 15px 10%;
+  margin: 15px;
   text-align: justify;
 }
 
@@ -36,12 +69,27 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
+.phone-container{
+  margin-top: 15px;
+}
+
+.phone{
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 3px;
+  color: #6d727b;
+  font-size: 0.9em;
+  font-family: 'Raleway', sans-serif;
+}
+
 .degree-container{
-  text-align: center;
   margin-top: 15px;
 }
 
 .degree{
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 3px;
   color: #6d727b;
   font-size: 0.9em;
   font-family: 'Raleway', sans-serif;
@@ -72,8 +120,10 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 33%;
   height: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
   background-color: #222831;
 }
 
@@ -91,21 +141,33 @@ body{
 .description-container{
   position: absolute;
   top: 0;
-  left: 40%;
-  width: 58%;
+  left: 35%;
+  width: 65%;
   height: auto;
+  display: inline-flex;
+}
+
+.experience-container {
+  width: 35%;
+}
+
+.experience-container ul li{
+  margin-top: 10%;
+  line-height: 1.6em;
+}
+
+.skills-container{
+  width: 65%;
   display: grid;
   flex-wrap: wrap;
   list-style: none;
   grid-gap: 2vh;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   padding: 2vh;
   justify-content: space-around;
 }
 
 .content-skill-container{
   margin-bottom: 2%;
-  /*max-height: 249.6283184px;*/
   color: white;
 }
 
@@ -139,6 +201,7 @@ body{
 }
 
 .card {
+  width: inherit;
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.45);
@@ -159,8 +222,7 @@ body{
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
+  margin-bottom: 10px;
 }
 
 .card_text {
@@ -169,4 +231,8 @@ body{
   line-height: 1.5;
   margin-bottom: 1.25rem;
   font-weight: 400;
+}
+
+.android_libraries{
+  display: none;
 }
